@@ -82,6 +82,7 @@ th, h2 {
 }
 
 .formHeader {
+    color: black;
     display: flex;
     position: relative;
     justify-content: center;

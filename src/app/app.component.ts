@@ -37,6 +37,10 @@ export class AppComponent implements OnInit {
     this.students = this.getLocalStorage()
   }
 
+  reset() {
+    this.isEditing = false
+  }
+  
   save() {
     if (this.isEditing) {
       this.students[this.currentIndex] = this.formStudent.value
@@ -46,6 +50,7 @@ export class AppComponent implements OnInit {
       this.students.push(this.formStudent.value)
     }
     this.setLocalStorage(this.students)
+    this.formStudent.rest()
     console.log("form:", this.formStudent.value)
   }
   
